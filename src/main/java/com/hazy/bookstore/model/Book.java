@@ -42,6 +42,12 @@ public class Book implements Serializable {
   public Book(String title, String isbn, Date publicationDate, Language language) {
     this.title = title;
     this.isbn = isbn;
+
+    // Not Recommended
+    if (publicationDate.after(new Date())) {
+      throw new RuntimeException("Publication date should be at the past");
+    }
+
     this.publicationDate = publicationDate;
     this.language = language;
   }
@@ -82,7 +88,8 @@ public class Book implements Serializable {
     return publicationDate;
   }
 
-  public void setPublicationDate(Date publicationDate) {
+  public void setPublicationDate(Date publicationDate) throws Exception {
+
     this.publicationDate = publicationDate;
   }
 
