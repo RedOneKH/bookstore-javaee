@@ -1,6 +1,5 @@
 package com.hazy.bookstore;
 
-
 import com.hazy.bookstore.model.Book;
 import com.hazy.bookstore.model.Language;
 import org.junit.Test;
@@ -8,7 +7,6 @@ import org.junit.Test;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
-
 
 public class BookTest {
 
