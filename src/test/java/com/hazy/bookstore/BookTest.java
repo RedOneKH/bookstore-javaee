@@ -13,9 +13,11 @@ public class BookTest {
   @Test(expected = RuntimeException.class)
   public void publicationDateTest() {
     // Publication date should be at the past, if not a RuntimeException will be thrown
+    // TODO: Make it with another way
     Date date = new GregorianCalendar(2019, Calendar.FEBRUARY, 11).getTime();
     Book b = new Book("JavaEE 7", "4596830145869",
       date, Language.ENGLISH);
+
   }
 
 }
